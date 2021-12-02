@@ -1,0 +1,10 @@
+music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
+let ring = neopixel.create(DigitalPin.P13, 24, NeoPixelMode.RGB)
+ring.clear()
+ring.range(0, 9).showRainbow(0, 255)
+ring.setBrightness(100)
+basic.forever(function () {
+    ring.rotate(1)
+    ring.show()
+    basic.pause(0)
+})
